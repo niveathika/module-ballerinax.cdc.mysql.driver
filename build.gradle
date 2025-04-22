@@ -64,6 +64,7 @@ allprojects {
 def moduleVersion = project.version.replace("-SNAPSHOT", "")
 
 tasks.register('build') {
+    dependsOn(':mysql.cdc.driver-ballerina:build')
 }
 
 release {
