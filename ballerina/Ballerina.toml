@@ -9,3 +9,33 @@ distribution = "2201.12.0"
 
 [platform.java21]
 graalvmCompatible = true
+
+[[platform.java21.dependency]]
+groupId = "io.debezium"
+artifactId = "debezium-connector-mysql"
+version = "3.0.8.Final"
+path = "./lib/debezium-connector-mysql-3.0.8.Final.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.debezium"
+artifactId = "debezium-connector-binlog"
+version = "3.0.8.Final"
+path = "./lib/debezium-connector-binlog-3.0.8.Final.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.debezium"
+artifactId = "debezium-ddl-parser"
+version = "3.0.8.Final"
+path = "./lib/debezium-ddl-parser-3.0.8.Final.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.debezium"
+artifactId = "mysql-binlog-connector-java"
+version = "0.40.2"
+path = "./lib/mysql-binlog-connector-java-0.40.2.jar"
+
+[[platform.java21.dependency]]
+groupId = "org.antlr"
+artifactId = "antlr4-runtime"
+version = "4.10.1"
+path = "./lib/antlr4-runtime-4.10.1.jar"
