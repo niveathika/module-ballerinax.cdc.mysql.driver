@@ -63,6 +63,31 @@ allprojects {
 
 def moduleVersion = project.version.replace("-SNAPSHOT", "")
 
+subprojects {
+
+    configurations {
+        externalJars
+    }
+
+    dependencies {
+        externalJars (group: 'io.debezium', name: 'debezium-connector-mysql', version: "${debeziumVersion}") {
+            transitive = false
+        }
+        externalJars (group: 'io.debezium', name: 'debezium-connector-binlog', version: "${debeziumVersion}") {
+            transitive = false
+        }
+        externalJars (group: 'io.debezium', name: 'debezium-ddl-parser', version: "${debeziumVersion}") {
+            transitive = false
+        }
+        externalJars (group: 'io.debezium', name: 'mysql-binlog-connector-java', version: "${debeziumMySQLBinLogVersion}") {
+            transitive = false
+        }
+        externalJars (group: 'org.antlr', name: 'antlr4-runtime', version: "${antlrVersion}") {
+            transitive = false
+        }
+    }
+}
+
 tasks.register('build') {
     dependsOn(':mysql.cdc.driver-ballerina:build')
 }

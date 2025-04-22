@@ -11,7 +11,18 @@ distribution-version = "2201.12.3"
 org = "ballerinax"
 name = "mysql.cdc.driver"
 version = "0.1.0"
+dependencies = [
+	{org = "ballerinax", name = "mysql.driver"}
+]
 modules = [
 	{org = "ballerinax", packageName = "mysql.cdc.driver", moduleName = "mysql.cdc.driver"}
+]
+
+[[package]]
+org = "ballerinax"
+name = "mysql.driver"
+version = "1.8.0"
+modules = [
+	{org = "ballerinax", packageName = "mysql.driver", moduleName = "mysql.driver"}
 ]
 
